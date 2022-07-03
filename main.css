@@ -33,7 +33,7 @@ a{
 }
 
 .nav-branding{
-    font-size: 2rem;
+    font-size: 8rem;
 }
 
 .nav-link{
@@ -45,7 +45,7 @@ a{
 }
 
 .hamburger{
-    display: none;
+    display: -moz-deck;
     cursor: pointer;
 }
 
