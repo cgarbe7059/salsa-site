@@ -1,3 +1,32 @@
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #23212a 0%,
+    #095b24 29%,
+    #ecae12 67%,
+    #dfdda3 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+
+  color: #fff;
+  background-clip: text;
+  text-emphasis-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear;
+  display: inline-block;
+      font-size: 60px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
 *{
     padding: 0;
     margin: 0;
@@ -8,17 +37,19 @@ header{
     background-color: #922D30;
 }
 
+/* Extra bullet point coming from HTML? */
 li{
-    list-style: none;
+    list-style-image:linear-gradient(to left bottom, #095b24, black)
 }
 
-a{
+/* Navigation Links */
+a{ 
     color:white;
     text-decoration: none;
 }
 
 .navbar{
-    min-height: 70px;
+    min-height: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,37 +75,6 @@ a{
     color: #456812;
 }
 
-.hamburger{
-    display: -moz-deck;
-    cursor: pointer;
-}
-
-.bar{
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: white;
-    }
-    
-
-@media(max-width:768px){
-    .hamburger{
-        display: block;
-    }
-
-    .hamburger.active .bar:nth-child(2){
-        opacity:0;
-    }
-        .hamburger.active .bar:nth-child(1){
-            transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
 .nav-menu{
     position: fixed;
     left: -100%;
@@ -86,12 +86,4 @@ a{
     text-align: center;
     transition: 0.3s;
 }   
-
-nav-item{
-    margin: 16px 0;
 }
-
-.nav-menu.active{
-    left: 0;
-}
- }
